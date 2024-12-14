@@ -63,7 +63,7 @@ class commandLineInterface(args: Array[String]) extends baseInterface {
       return imgFileImporter(result.get._2)
     }
     val result2 = argsSplit.find(_._1 == "--image-random")
-    if(result.isDefined) return imgGenerator()
+    if(result2.isDefined) return imgGenerator()
     throw IllegalArgumentException("No image input method specified")
   }
 
