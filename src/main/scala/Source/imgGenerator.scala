@@ -7,7 +7,6 @@ import scala.util.Random
 
 class imgGenerator extends ImgSource{
   override def load(): basicImage[rgbColor] = {
-    // TODO
 
     var generated = ArrayBuffer[ArrayBuffer[rgbColor]]()
     var width = Random.between(100,500)

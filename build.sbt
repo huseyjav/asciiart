@@ -1,6 +1,7 @@
+
 name := "ASCIIArt"
 
-version := "1.0.0"
+version := "1.10.5"
 
 scalaVersion := "3.4.2"
 

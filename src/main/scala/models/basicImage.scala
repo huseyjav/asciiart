@@ -10,6 +10,7 @@ class basicImage[T] (image: ArrayBuffer[ArrayBuffer[T]]) {
     image.length
   }
   def getWidth() : Int = {
+    if(getHeight()==0) return 0
     image(0).length
   }
   def getRow(i : Int) : ArrayBuffer[T] = {
@@ -26,3 +27,4 @@ class basicImage[T] (image: ArrayBuffer[ArrayBuffer[T]]) {
     basicImage[N](image.map[ArrayBuffer[N]](y => y.map[N](func)))
   }
 }
+

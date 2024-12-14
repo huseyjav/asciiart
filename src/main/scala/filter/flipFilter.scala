@@ -1,26 +1,28 @@
 package filter
-import models.basicImage
+import models.{basicImage, greyColor}
 
 import scala.collection.mutable.ArrayBuffer
 
-class flipFilter(isFlipOnX : Boolean) extends baseFilter[Int]{
+class flipFilter(isFlipOnX : Boolean) extends baseFilter[greyColor]{
 
-  def flipOnX(image : basicImage[Int]): basicImage[Int] = {
-    var flipped = ArrayBuffer[ArrayBuffer[Int]]()
+  def getisFlipOnX : Boolean = isFlipOnX
+
+  private def flipOnX(image : basicImage[greyColor]): basicImage[greyColor] = {
+    var flipped = ArrayBuffer[ArrayBuffer[greyColor]]()
     for (x <- 0 until image.getWidth()) {
       flipped += image.getColumn(x).reverse
     }
-    basicImage[Int](flipped.transpose)
+    basicImage[greyColor](flipped.transpose)
   }
 
-  def flipOnY(image: basicImage[Int]): basicImage[Int] = {
-    var flipped = ArrayBuffer[ArrayBuffer[Int]]()
+  private def flipOnY(image: basicImage[greyColor]): basicImage[greyColor] = {
+    var flipped = ArrayBuffer[ArrayBuffer[greyColor]]()
     for (y <- 0 until image.getHeight()) {
       flipped += image.getRow(y).reverse
     }
-    basicImage[Int](flipped)
+    basicImage[greyColor](flipped)
   }
-  override def applyFilter(image: basicImage[Int]): basicImage[Int] = {
+  override def applyFilter(image: basicImage[greyColor]): basicImage[greyColor] = {
     if(isFlipOnX) return flipOnX(image)
     return flipOnY(image)
   }

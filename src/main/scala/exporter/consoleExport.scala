@@ -1,14 +1,9 @@
 package exporter
 
-import models.basicImage
+import models.{asciiColor, basicImage}
 
-class consoleExport extends basicExport[Char]{
-  override def exportSource(source: basicImage[Char]): Unit = {
-    for (y <- 0 until source.getHeight()) {
-      for (x <- 0 until source.getWidth()) {
-        print(source.getPixel(x, y))
-      }
-      print('\n')
-    }
+class consoleExport extends basicExport[asciiColor]{
+  override def exportSource(source: basicImage[asciiColor]): Unit = {
+    print(serializer[asciiColor]().serialize(source))
   }
 }
