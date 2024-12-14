@@ -78,4 +78,10 @@ class commandLineInterfaceTest extends AnyFunSuite{
     assert(parsedArgs.contains(("--output-file", "output.txt")))
     assert(parsedArgs.contains(("--invert", "")))
   }
+  test("custom transformation table test"){
+    val args = Array("--table", "ashduhasdi")
+    val cli = commandLineInterface(args)
+    assert(cli.getGreyToAsciiTransformer.isInstanceOf[linearGreyToAsciiTransformer])
+    assert(cli.getGreyToAsciiTransformer.asInstanceOf[linearGreyToAsciiTransformer].getTransformationTable == "ashduhasdi")
+  }
 }

@@ -25,7 +25,7 @@ class commandLineInterface(args: Array[String]) extends baseInterface {
     if(result.isEmpty) return linearGreyToAsciiTransformer(" .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$")
     if(result.get._2 == "bourke-small") return linearGreyToAsciiTransformer(" .:-=+*#%@")
     if(result.get._2 == "non-linear") return nonLinearGreyToAsciiTransformer()
-    throw IllegalArgumentException("wrong table argument")
+    return linearGreyToAsciiTransformer(result.get._2)
   }
 
   override def getRgbToGreyTransformer: rgbToGreyTransformer = {

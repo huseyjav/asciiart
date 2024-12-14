@@ -13,5 +13,6 @@ The idea of this project is to load images, translate them into ASCII ART images
 5. --flip y/x
 6. --invert
 7. --brightness +/-255
+8. --table bourke-small/non-linear/CUSTOM
 
 Ordering of the options doesn't matter
