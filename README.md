@@ -23,6 +23,7 @@ The program can be compiled and ran with sbt. Note that due to how sbt parses co
 `run [options]`
 
 ## Example run
-`run "--image sample_runs/shrek.png --flip x --flip y --brightness -100 --output-file sample_runs/shrek_test.txt"`
+`run "--image sample_runs/shrek.png --flip x --flip y --brightness -100 --output-file sample_runs/shrek_test.txt"`  
+
 <img width="220" height="326" alt="original" src="sample_runs/shrek.png"/>
 <img width="220" height="326" alt="ascii" src="sample_runs/shrektxt.png"/>
