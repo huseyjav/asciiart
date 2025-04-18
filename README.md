@@ -1,6 +1,7 @@
 # ASCII Art
 
-The idea of this project is to load images, translate them into ASCII ART images, optionally apply filters, and save them. 
+The idea of this project is to load images, translate them into ASCII ART images, optionally apply filters, and save them.  
+Every component of the project was made in an OOP manner, making it easily extendable with any feature such as: loading images from the web, making new filters, uploading output to the web etc.
 
 ## Available options
 
